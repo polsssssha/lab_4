@@ -75,7 +75,7 @@
         <Compile Include="menu\MenuItem.cs" />
         <Compile Include="menu\menus\MainMenu.cs" />
         <Compile Include="menu\menus\ShakerSort.cs" />
-        <Compile Include="menu\menus\TextSorting.cs" />
+        <Compile Include="menu\menus\ABCSort.cs" />
         <Compile Include="menu\utils\ConsoleUtil.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />

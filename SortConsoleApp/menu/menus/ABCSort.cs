@@ -7,9 +7,9 @@ using SortConsoleApp.menu.menus.utils;
 
 namespace SortConsoleApp.menu.menus
 {
-    public class TextSorting : MenuItem
+    public class ABCSort : MenuItem
     {
-        public TextSorting(bool isSelected = false) : base(title: "ABC Сортировка текста", isSelected)
+        public ABCSort(bool isSelected = false) : base(title: "ABC Сортировка текста", isSelected)
         {
         }
 
@@ -35,13 +35,13 @@ namespace SortConsoleApp.menu.menus
                 else
                 {
                     var inputListWord = inputText.Trim().Split(' ').Where(x => x != "").ToList();
-                    var result = ABCSort.Sort(inputListWord).ToList();
+                    var result = algorithms.ABCSort.Sort(inputListWord).ToList();
                     for (int i = 0; i < result.Count; i++)
                     {
                         Console.WriteLine($"{i}) {result[i]} ");
                     }
 
-                    var wordCount = ABCSort.Count(result);
+                    var wordCount = algorithms.ABCSort.Count(result);
                     Console.WriteLine("\nПодсчет количества слова в тексте:\n");
                     foreach (var word in wordCount)
                     {

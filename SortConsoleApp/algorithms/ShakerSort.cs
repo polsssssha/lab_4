@@ -6,7 +6,6 @@ namespace SortConsoleApp.algorithms;
 
 public class ShakerSort
 {
-    [SuppressMessage("ReSharper.DPA", "DPA0002: Excessive memory allocations in SOH", MessageId = "type: System.String")]
     public static ICollection<string> Sort(List<string> words)
     {
         for (int i = 0; i < words.Count / 2; i++)
@@ -41,6 +40,7 @@ public class ShakerSort
 
     private static bool CompareString(string s1, string s2)
     {
+        Console.WriteLine($"Сравнение слов {s1} и {s2}");
         var min = Math.Min(s1.Length, s2.Length);
         for (int i = 0; i < min; i++)
         {

@@ -41,7 +41,7 @@ public class ShakerSort : MenuItem
                     Console.WriteLine($"{i}) {result[i]} ");
                 }
 
-                var wordCount = ABCSort.Count(result);
+                var wordCount = algorithms.ABCSort.Count(result);
                 Console.WriteLine("\nПодсчет количества слова в тексте:");
                 foreach (var word in wordCount)
                 {
