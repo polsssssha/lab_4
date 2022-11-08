@@ -66,7 +66,7 @@ namespace SortAlgorithms
 
         private void RefreshItems()
         {
-            foreach(var item in items)
+            foreach (var item in items)
             {
                 item.Refresh();
             }
@@ -137,6 +137,7 @@ namespace SortAlgorithms
             {
                 algorithm.Items[i].SetPosition(i);
             }
+
             panel3.Refresh();
 
             algorithm.CompareEvent += AlgorithmCompareEvent;
@@ -144,35 +145,36 @@ namespace SortAlgorithms
             algorithm.SetEvent += AlgorithmSetEvent;
             var time = algorithm.Sort();
 
-            TimeLbl.Text = "Время: " + time.Seconds;
-            SwopLbl.Text = "Количество обменов: " + algorithm.SwopCount;
-            CompareLbl.Text = "Количество сравнений: " + algorithm.ComparisonCount;
-        }
-
-  
-
-        private void SelectionSortBtn_Click(object sender, EventArgs e)
-        {
-            var select = new SelectionSort<SortedItem>(items);
-            BtnClick(select);
-        }
-
-
-        private void QuickSortBtn_Click(object sender, EventArgs e)
-        {
-            var quick = new QuickSort<SortedItem>(items);
-            BtnClick(quick);
-        }
-        private void Clear(object sender, EventArgs e)
-        {
-            this.items.Clear();
-            RefreshItems();
-            this.Resize();
-
-        }
-        private void Resize()
-        {
-            this.ClientSize = new Size(350+items.Count*20, 242);
-        }
+            TimeLbl.Text = $"Время (мс): {time.Milliseconds}";
+            SwopLbl.Text = $"Количество обменов: {algorithm.SwopCount}";
+            CompareLbl.Text = $"Количество сравнений: {algorithm.ComparisonCount}";
     }
+
+
+    private void SelectionSortBtn_Click(object sender, EventArgs e)
+    {
+        var select = new SelectionSort<SortedItem>(items);
+        BtnClick(select);
+    }
+
+
+    private void QuickSortBtn_Click(object sender, EventArgs e)
+    {
+        var quick = new QuickSort<SortedItem>(items);
+        BtnClick(quick);
+    }
+
+    private void Clear(object sender, EventArgs e)
+    {
+        this.items.Clear();
+        RefreshItems();
+        this.Resize();
+    }
+
+    private void Resize()
+    {
+        this.ClientSize = new Size(350 + items.Count * 20, 242);
+    }
+}
+
 }

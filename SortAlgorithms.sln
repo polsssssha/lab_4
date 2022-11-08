@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortAlgorithms", "SortAlgor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithm", "Algorithm\Algorithm.csproj", "{77584657-6C5C-4F10-B4A8-7E2B8492F7CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortConsoleApp", "SortConsoleApp\SortConsoleApp.csproj", "{7DF3A3A6-B937-4D82-A463-934F8F4E732D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{77584657-6C5C-4F10-B4A8-7E2B8492F7CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77584657-6C5C-4F10-B4A8-7E2B8492F7CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77584657-6C5C-4F10-B4A8-7E2B8492F7CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DF3A3A6-B937-4D82-A463-934F8F4E732D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DF3A3A6-B937-4D82-A463-934F8F4E732D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DF3A3A6-B937-4D82-A463-934F8F4E732D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DF3A3A6-B937-4D82-A463-934F8F4E732D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -24,8 +24,6 @@ namespace SortAlgorithms
             base.Dispose(disposing);
         }
 
-        #region Код, автоматически созданный конструктором форм Windows
-
         /// <summary>
         /// Требуемый метод для поддержки конструктора — не изменяйте 
         /// содержимое этого метода с помощью редактора кода.
@@ -116,7 +114,7 @@ namespace SortAlgorithms
             // 
             // TimeLbl
             // 
-            CreateLbl(label: this.TimeLbl, name: "TimeLbl", text:"Время:", lablIndex:6, x:9, y:160);
+            CreateLbl(label: this.TimeLbl, name: "TimeLbl", text:"Время (мс):", lablIndex:6, x:9, y:160);
             
             // 
             // CompareLbl
@@ -163,8 +161,6 @@ namespace SortAlgorithms
             this.PerformLayout();
 
         }
-
-        #endregion
 
         private void CreateTextBox(TextBox textBox,string name)
         {

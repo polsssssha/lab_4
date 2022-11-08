@@ -8,6 +8,7 @@ namespace SortConsoleApp.menu.menus
         public MainMenu() : base(title: "", items: new List<MenuItem>()
         {
             new TextSorting(),
+            new ShakerSort()
         })
         {
         }

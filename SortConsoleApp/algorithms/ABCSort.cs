@@ -2,7 +2,7 @@
 
 namespace SortConsoleApp.algorithms
 {
-    public class TextSort
+    public class ABCSort
     {
         public static Dictionary<string, int> Count(ICollection<string> text)
         {
@@ -22,7 +22,7 @@ namespace SortConsoleApp.algorithms
             return dictionary;
         }
 
-        public static ICollection<string> ABCSort(ICollection<string> words, int rank = 0)
+        public static ICollection<string> Sort(ICollection<string> words, int rank = 0)
         {
             if (words.Count > 1)
             {
@@ -56,7 +56,7 @@ namespace SortConsoleApp.algorithms
                 {
                     if (squares.ContainsKey(i))
                     {
-                        foreach (var word in ABCSort(squares[i], rank + 1))
+                        foreach (var word in Sort(squares[i], rank + 1))
                         {
                             result.Add(word);
                         }
