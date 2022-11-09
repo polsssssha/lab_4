@@ -14,11 +14,11 @@ namespace SortConsoleApp
     {
         public static void Main(string[] args)
         {
-            Menu menu = new MainMenu();
-            menu.Start();
+            // Menu menu = new MainMenu();
+            // menu.Start();
             
             // TestTextSort(x => ABCSort.Sort(x), "ABC Sort", 1);
-            // TestTextSort(x => ShakerSort.Sort(x), "Shaker Sort", 1);
+            TestTextSort(x => ShakerSort.Sort(x), "Shaker Sort", 1);
         }
 
         private static void TestTextSort(Func<List<string>, ICollection<string>> func, string name, int iterCount)
@@ -26,7 +26,7 @@ namespace SortConsoleApp
             var tester = new TimeTester();
             var tester2 = new MemoryTester();
             var allText = File.ReadAllText(Directory.GetCurrentDirectory() + "\\..\\..\\testText.txt").Split(' ');
-            for (int i = 1; i <= 10000; i += 1)
+            for (int i = 1; i <= 1000; i += 1)
             {
                 var testText = CopyTo(allText, i);
                 

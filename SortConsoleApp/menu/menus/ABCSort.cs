@@ -34,7 +34,7 @@ namespace SortConsoleApp.menu.menus
                 }
                 else
                 {
-                    var inputListWord = inputText.Trim().Split(' ').Where(x => x != "").ToList();
+                    var inputListWord = inputText.Trim().Split(new []{' ', ',', '.', '(', ')'}).Where(x => x != "").ToList();
                     var result = algorithms.ABCSort.Sort(inputListWord).ToList();
                     for (int i = 0; i < result.Count; i++)
                     {

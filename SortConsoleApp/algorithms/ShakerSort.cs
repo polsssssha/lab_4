@@ -24,7 +24,7 @@ public class ShakerSort
             {
                 if (CompareString(words[j - 1].ToLower(), words[j].ToLower()))
                 {
-                    (words[j - 1], words[j]) = (words[j], words[j + 1]);
+                    (words[j - 1], words[j]) = (words[j], words[j - 1]);
                     swapFlag = true;
                 }
             }
@@ -40,7 +40,7 @@ public class ShakerSort
 
     private static bool CompareString(string s1, string s2)
     {
-        Console.WriteLine($"Сравнение слов {s1} и {s2}");
+        // Console.WriteLine($"Сравнение слов {s1} и {s2}");
         var min = Math.Min(s1.Length, s2.Length);
         for (int i = 0; i < min; i++)
         {
