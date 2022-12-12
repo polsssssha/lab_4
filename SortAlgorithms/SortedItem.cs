@@ -10,7 +10,7 @@ namespace SortAlgorithms
 {
     class SortedItem : IComparable
     {
-        public VerticalProgressBar.VerticalProgressBar ProgressBar { get;private set; }
+        public VerticalProgressBar.VerticalProgressBar ProgressBar { get; private set; }
         public Label Label { get; private set; }
         public int Value { get; private set; }
         public int Number { get; private set; }
@@ -78,7 +78,7 @@ namespace SortAlgorithms
 
         public int CompareTo(object obj)
         {
-            if(obj is SortedItem item)
+            if (obj is SortedItem item)
             {
                 return Value.CompareTo(item.Value);
             }

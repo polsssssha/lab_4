@@ -6,7 +6,7 @@ public abstract class StringSort
 {
     public int Delay { get; set; }
 
-    public StringSort(int delay)
+    protected StringSort(int delay)
     {
         Delay = delay;
     }

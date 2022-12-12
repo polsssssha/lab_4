@@ -50,16 +50,11 @@ public abstract class AlgorithmStringSortMenu : MenuItem
                 var inputListWord = inputText.Trim().Split(new[] {' ', ',', '.', '(', ')'}).Where(x => x != "")
                     .ToList();
                 var result = _sort.Sort(inputListWord).ToList();
+                var wordCount = AlgorithmsUtil.Count(result);
+                Console.WriteLine();
                 for (int i = 0; i < result.Count; i++)
                 {
-                    Console.WriteLine($"{i}) {result[i]} ");
-                }
-
-                var wordCount = AlgorithmsUtil.Count(result);
-                Console.WriteLine("\nПодсчет количества слова в тексте:");
-                foreach (var word in wordCount)
-                {
-                    Console.WriteLine($"{word.Key} [ {word.Value} ]");
+                    Console.WriteLine($"{i}) \"{result[i]}\" встретилось раз [ {wordCount[result[i]]} ] ");
                 }
             }
 

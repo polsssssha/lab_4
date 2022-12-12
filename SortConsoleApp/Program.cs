@@ -14,8 +14,8 @@ namespace SortConsoleApp
     {
         public static void Main(string[] args)
         {
-            // Menu menu = new MainMenu();
-            // menu.Start();
+            Menu menu = new MainMenu();
+            menu.Start();
             
             // TestTextSort(x => ABCSort.Sort(x), "ABC Sort", 1);
             // TestTextSort(x => ShakerSort.Sort(x), "Shaker Sort", 1);
