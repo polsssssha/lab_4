@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using AlgorythmsLab3.Tester;
 using AlgorythmsLab3.Testing.Tester;
-using SortConsoleApp.algorithms;
 using SortConsoleApp.menu;
 using SortConsoleApp.menu.menus;
+using ABCSort = SortConsoleApp.algorithms.ABCSort;
 using ShakerSort = SortConsoleApp.algorithms.ShakerSort;
 
 namespace SortConsoleApp
@@ -18,7 +18,7 @@ namespace SortConsoleApp
             // menu.Start();
             
             // TestTextSort(x => ABCSort.Sort(x), "ABC Sort", 1);
-            TestTextSort(x => ShakerSort.Sort(x), "Shaker Sort", 1);
+            // TestTextSort(x => ShakerSort.Sort(x), "Shaker Sort", 1);
         }
 
         private static void TestTextSort(Func<List<string>, ICollection<string>> func, string name, int iterCount)
@@ -26,7 +26,7 @@ namespace SortConsoleApp
             var tester = new TimeTester();
             var tester2 = new MemoryTester();
             var allText = File.ReadAllText(Directory.GetCurrentDirectory() + "\\..\\..\\testText.txt").Split(' ');
-            for (int i = 1; i <= 1000; i += 1)
+            for (int i = 1; i <= 50_000; i += 1)
             {
                 var testText = CopyTo(allText, i);
                 

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 
 namespace SortConsoleApp.algorithms;
 
-public class ShakerSort
+public class ShakerSort : StringSort
 {
-    public static ICollection<string> Sort(List<string> words)
+    public ShakerSort() { }
+
+    public override ICollection<string> Sort(List<string> words)
     {
         for (int i = 0; i < words.Count / 2; i++)
         {
@@ -40,7 +41,7 @@ public class ShakerSort
 
     private static bool CompareString(string s1, string s2)
     {
-        // Console.WriteLine($"Сравнение слов {s1} и {s2}");
+        Console.WriteLine($"Сравнение слов {s1} и {s2}");
         var min = Math.Min(s1.Length, s2.Length);
         for (int i = 0; i < min; i++)
         {
@@ -61,4 +62,6 @@ public class ShakerSort
 
         return false;
     }
+
+    public ShakerSort(int delay) : base(delay) { }
 }

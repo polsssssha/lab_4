@@ -2,27 +2,11 @@
 
 namespace SortConsoleApp.algorithms
 {
-    public class ABCSort
+    public class ABCSort : StringSort
     {
-        public static Dictionary<string, int> Count(ICollection<string> text)
-        {
-            Dictionary<string, int> dictionary = new Dictionary<string, int>();
-            foreach (var word in text)
-            {
-                if (dictionary.ContainsKey(word))
-                {
-                    dictionary[word]++;
-                }
-                else
-                {
-                    dictionary.Add(word, 1);
-                }
-            }
+        public ABCSort() { }
 
-            return dictionary;
-        }
-
-        public static ICollection<string> Sort(ICollection<string> words, int rank = 0)
+        private ICollection<string> Sort(ICollection<string> words, int rank = 0)
         {
             if (words.Count > 1)
             {
@@ -67,6 +51,12 @@ namespace SortConsoleApp.algorithms
             }
 
             return words;
+        }
+
+        public ABCSort(int delay) : base(delay) { }
+        public override ICollection<string> Sort(List<string> text)
+        {
+            return Sort(text);
         }
     }
 }

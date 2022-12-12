@@ -68,11 +68,14 @@
         <Reference Include="WindowsBase" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="algorithms\AlgorithmsUtil.cs" />
         <Compile Include="algorithms\ShakerSort.cs" />
         <Compile Include="algorithms\ABCSort.cs" />
+        <Compile Include="algorithms\StringSort.cs" />
         <Compile Include="menu\ExitMenuItem.cs" />
         <Compile Include="menu\Menu.cs" />
         <Compile Include="menu\MenuItem.cs" />
+        <Compile Include="menu\menus\AlgorithmStringSortMenu.cs" />
         <Compile Include="menu\menus\MainMenu.cs" />
         <Compile Include="menu\menus\ShakerSort.cs" />
         <Compile Include="menu\menus\ABCSort.cs" />
