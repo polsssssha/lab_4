@@ -19,7 +19,7 @@ public class ShakerSort : StringSort
                 if (CompareString(words[j].ToLower(), words[j + 1].ToLower()))
                 {
                     Thread.Sleep(Delay);
-                    Console.WriteLine($"\tСмена слов {words[j + 1]} и {words[j]} местами");
+                    Console.WriteLine($"\tСмена слов {words[j + 1]} и {words[j]} местами\n");
                     (words[j], words[j + 1]) = (words[j + 1], words[j]);
                     swapFlag = true;
                 }
@@ -31,7 +31,7 @@ public class ShakerSort : StringSort
                 if (CompareString(words[j - 1].ToLower(), words[j].ToLower()))
                 {
                     Thread.Sleep(Delay);
-                    Console.WriteLine($"\tСмена слов {words[j - 1]} и {words[j]} местами");
+                    Console.WriteLine($"\tСмена слов {words[j - 1]} и {words[j]} местами\n");
                     (words[j - 1], words[j]) = (words[j], words[j - 1]);
                     swapFlag = true;
                 }

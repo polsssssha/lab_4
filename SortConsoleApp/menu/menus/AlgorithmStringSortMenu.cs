@@ -48,6 +48,7 @@ public abstract class AlgorithmStringSortMenu : MenuItem
                 _sort.Delay = delay;
 
                 var inputListWord = inputText.Trim().Split(new[] {' ', ',', '.', '(', ')'}).Where(x => x != "")
+                    .Select(x => x.ToLower())
                     .ToList();
                 var result = _sort.Sort(inputListWord).ToList();
                 var wordCount = AlgorithmsUtil.Count(result);

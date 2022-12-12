@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading;
 
 namespace SortConsoleApp.algorithms
 {
@@ -10,9 +12,13 @@ namespace SortConsoleApp.algorithms
         {
             if (words.Count > 1)
             {
+                Console.WriteLine($"Сравнение слов по символу на позиции {rank}\n");
+                Thread.Sleep(Delay);
                 Dictionary<char, List<string>> squares = new Dictionary<char, List<string>> {{'@', new List<string>()}};
                 foreach (var word in words)
                 {
+                    Console.WriteLine($"Сравнение позиции {rank} и длину слова {word}");
+                    Thread.Sleep(Delay);
                     if (rank < word.Length)
                     {
                         if (squares.ContainsKey(word[rank]))
@@ -23,15 +29,23 @@ namespace SortConsoleApp.algorithms
                         {
                             squares.Add(word[rank], new List<string>() {word});
                         }
+
+                        Console.WriteLine($"\tДобавление слова \"{word}\" в группу [ {word[rank]} ]\n");
+                        Thread.Sleep(Delay);
                     }
                     else
                     {
+                        Console.WriteLine($"Добавление слова \"{word}\" в дефолтную группу [ @ ]\n");
+                        Thread.Sleep(Delay);
                         squares['@'].Add(word);
                     }
                 }
 
                 if (squares['@'].Count == words.Count)
                 {
+                    Console.WriteLine(
+                        $"Прошли все символы всех слов, поэтому добавляем отсортированные значение в результирующий список\n");
+                    Thread.Sleep(Delay);
                     return words;
                 }
 
@@ -54,6 +68,7 @@ namespace SortConsoleApp.algorithms
         }
 
         public ABCSort(int delay) : base(delay) { }
+
         public override ICollection<string> Sort(List<string> text)
         {
             return Sort(text);
